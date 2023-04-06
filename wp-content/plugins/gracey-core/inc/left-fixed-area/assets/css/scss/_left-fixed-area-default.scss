@@ -1,0 +1,27 @@
+/* ==========================================================================
+# Left Fixed Area style - begin
+========================================================================== */
+
+#qodef-left-fixed-area {
+	position: fixed;
+	display: flex;
+	width: 30px;
+	top: 0;
+	left: 38px;
+	height: 100vh;
+	justify-content: center;
+	z-index: 999;
+	opacity: 1;
+	transition: opacity .3s ease;
+
+	.qodef-left-fixed-area-inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+/* ==========================================================================
+# Left Fixed Area style - end
+========================================================================== */

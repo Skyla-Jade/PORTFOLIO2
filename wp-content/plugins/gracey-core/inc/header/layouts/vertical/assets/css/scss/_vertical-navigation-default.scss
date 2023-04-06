@@ -1,0 +1,228 @@
+/* ==========================================================================
+   Header Vertical navigation style - begin
+   ========================================================================== */
+$menu-top-bottom-spacing: 11px 0 0;
+$menu-level-two-left-spacing: 0;
+$menu-item-top-bottom-spacing: 5px;
+
+.qodef-header--vertical {
+	
+	.qodef-header-vertical-navigation {
+		margin-top: 125px;
+		margin-bottom: auto;
+		z-index: 100;
+		width: 100%;
+		
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			
+			li {
+				position: relative;
+				padding: 0;
+				margin: $menu-item-top-bottom-spacing 0;
+				
+				a {
+					position: relative;
+					display: block;
+					
+					.qodef-menu-item-arrow {
+						display: none;
+					}
+
+					> span {
+						position: relative;
+
+						&:before {
+							content: '';
+							position: absolute;
+							bottom: 2px;
+							left: 0;
+							height: 1px;
+							width: calc(100% - .02em);
+							background: currentColor;
+							transform: scaleX(0);
+							transform-origin: left;
+							transition: transform .4s cubic-bezier(.39,.1,0,.98);
+						}
+					}
+
+					&:hover {
+						> span {
+							&:before {
+								transform: scaleX(1);
+							}
+						}
+					}
+				}
+				
+				.qodef-drop-down-second {
+					transform: translateZ(0);
+				}
+				
+				.qodef-drop-down-second-inner {
+					position: relative;
+					display: block;
+					padding: 0;
+					z-index: 997;
+				}
+				
+				&.qodef--hide-link {
+					
+					> a {
+						cursor: default;
+					}
+				}
+			}
+		}
+		
+		.qodef-menu-item-icon {
+			margin-right: 5px;
+		}
+		
+		.qodef-mega-menu-widget-holder {
+			display: none;
+		}
+		
+		> ul {
+			
+			> li {
+				margin: 22px 0;
+				
+				> a {
+					font-family: $heading-font;
+					font-size: 14px;
+					line-height: 2em;
+					font-weight: 400;
+					text-transform: uppercase;
+					letter-spacing: 0.05em;
+					
+					&:hover {
+						@include qodefMenuLevelOneHoverStyle();
+					}
+
+					> span {
+						&:before {
+							bottom: 0;
+						}
+					}
+				}
+				
+				.qodef-drop-down-second-inner {
+					
+					> ul {
+						padding: $menu-top-bottom-spacing;
+					}
+					
+					ul {
+						padding-left: $menu-level-two-left-spacing;
+						
+						li {
+							
+							> a {
+								@include qodefMenuLevelTwoInitialStyle();
+								font-size: 17px;
+								line-height: 1.5em;
+								font-weight: 300;
+							}
+							
+							&:hover,
+							&.current-menu-ancestor,
+							&.current-menu-item {
+								
+								> a {
+									> span {
+										&:before {
+											transform: scaleX(1);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				
+				&.current-menu-ancestor,
+				&.current-menu-item {
+					
+					> a {
+						> span {
+							&:before {
+								transform: scaleX(1);
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		&.qodef-vertical-drop-down--below {
+			
+			ul li {
+				
+				a {
+					
+					.qodef-menu-item-arrow {
+						transform: rotate(0);
+						transition: transform .3s ease;
+					}
+				}
+				
+				.qodef-drop-down-second {
+					display: none;
+				}
+				
+				&.qodef-menu-item--open {
+					
+					> a {
+						
+						.qodef-menu-item-arrow {
+							transform: rotate(90deg);
+						}
+					}
+				}
+			}
+		}
+		
+		&.qodef-vertical-drop-down--side {
+			
+			.qodef-drop-down-second {
+				position: absolute;
+				top: 0;
+				width: 100%;
+				
+				ul {
+					position: absolute;
+					top: -23px;
+					left: calc(100% + 40px); //because of the padding right
+					width: 254px;
+					background-color: #fff;
+					padding: 25px 20px;
+					margin-left: 50px;
+					visibility: hidden;
+					opacity: 0;
+					transition: all $transition-timing;
+					
+					&.qodef-float--open {
+						margin-left: 0;
+						opacity: 1;
+						visibility: visible;
+						z-index: 900;
+					}
+					
+					ul {
+						top: -25px; //because of the padding top
+						left: calc(100% + 20px); //because of the padding right
+						visibility: hidden;
+						transition: all .2s ease;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==========================================================================
+   Header Vertical navigation style - end
+   ========================================================================== */

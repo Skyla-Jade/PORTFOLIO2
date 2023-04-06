@@ -1,0 +1,34 @@
+/* ==========================================================================
+   Single Images shortcode styles
+   ========================================================================== */
+
+.qodef-single-image {
+
+	img {
+		display: block;
+	}
+	
+	&.qodef--full-width-image {
+		max-width: 130vW;
+		margin-left: -10%;
+		width: 130vW;
+	}
+	
+	&.qodef--distort-animation.qodef--distort-effect-5 {
+		position: relative;
+		
+		@at-root body:not(.elementor-editor-active) &{
+			.qodef-m-image {
+				opacity: 0;
+			}
+		}
+		
+		canvas {
+			@include qodefAbsoluteLayout();
+			
+			@at-root body.qodef-theme-cursor &{
+				cursor: none!important;
+			}
+		}
+	}
+}

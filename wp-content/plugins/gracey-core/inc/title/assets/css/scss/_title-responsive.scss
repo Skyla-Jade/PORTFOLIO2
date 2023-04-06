@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Title responsive styles
+   ========================================================================== */
+
+
+    
+.qodef-page-title {
+
+    @include qodefScreenSize1024 {
+    
+        .qodef-m-content {
+        
+            body:not(.qodef-content-behind-header) & {
+                padding-top: 0 !important; //overrides padding that header puts on content
+            }
+
+            &.qodef-content-full-width {
+                padding-left: 40px !important;
+                padding-right: 40px !important;
+            }
+        }
+    }
+
+    @include qodefScreenSize768 {
+
+        .qodef-m-content {
+            &.qodef-content-full-width {
+                padding-left: 7% !important;
+                padding-right: 7% !important;
+            }
+        }
+    }
+
+    @include qodefScreenSize480 {
+
+        .qodef-m-content {
+            &.qodef-content-full-width {
+                padding-left: 9% !important;
+                padding-right: 9% !important;
+            }
+        }
+    }
+}
+
+

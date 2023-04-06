@@ -1,0 +1,56 @@
+/* ==========================================================================
+   Stacked Portfolio shortcode responsive styles
+   ========================================================================== */
+
+.qodef-stacked-portfolio {
+
+    @include qodefScreenSize1024 {
+
+        .qodef-sp-scroll-note {
+            left: 30px;
+        }
+
+        .qodef-sp-widget-area {
+            right: 30px;
+        }
+
+        .qodef-sp-end-of-scroll {
+            max-width: 75vw;
+        }
+
+        .qodef-sp-text-items {
+            display: block;
+        }
+
+        .qodef-eos-title {
+            font-size: 40px;
+        }
+    }
+
+    @include qodefScreenSize768 {
+        .qodef-eos-title {
+            font-size: 30px;
+        }
+    }
+
+    @include qodefScreenSize680 {
+        .qodef-sp-widget-area,
+        .qodef-sp-scroll-note {
+            display: none;
+        }
+
+        .qodef-sp-text-items {
+            bottom: 40px;
+            left: 40px;
+
+            .qodef-e-number {
+                font-size: 120px;
+                top: -74px;
+            }
+        }
+
+        .qodef-eos-title {
+            font-size: 22px;
+        }
+    }
+}

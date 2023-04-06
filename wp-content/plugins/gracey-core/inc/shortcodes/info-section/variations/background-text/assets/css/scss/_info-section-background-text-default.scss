@@ -1,0 +1,99 @@
+/* ==========================================================================
+   Info Section Background Text shortcode styles
+   ========================================================================== */
+.qodef-info-section {
+	&.qodef-layout--background-text {
+		@include qodefRelativeLayout();
+
+		.qodef-m-info {
+			position: relative;
+			z-index: 2;
+
+			> .qodef-m-text {
+				margin: 0;
+				font-size: 17px;
+				line-height: 1.65em;
+			}
+		}
+		.qodef-m-title {
+			margin: 0 0 20px;
+		}
+
+		.qodef-m-subtitle {
+			font-size: 18px;
+			margin: 0 0 13px;
+		}
+
+		.qodef-m-button {
+			margin-top: 47px;
+		}
+
+		.qodef-m-background-text {
+			position: absolute;
+			display: inline-block;
+			font-family: $heading-font;
+			font-size: 150px;
+			line-height: 0.8em;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			text-transform: uppercase;
+			text-align: center;
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: rgba($heading-color, 0.14);
+		}
+		
+		&.qodef-background-text-pos--top-left {
+			.qodef-m-background-text {
+				top: -24px;
+				left: -50px;
+			}
+		}
+		
+		&.qodef-background-text-pos--top-right {
+			.qodef-m-background-text {
+				top: -24px;
+				right: -20px;
+			}
+		}
+		
+		&.qodef-background-text-pos--bottom-left {
+			.qodef-m-background-text {
+				bottom: 0;
+				left: -20px;
+			}
+		}
+		
+		&.qodef-background-text-pos--bottom-right {
+			.qodef-m-background-text {
+				bottom: 0;
+				right: -20px;
+			}
+		}
+		
+		&.qodef-background-text-pos--center {
+			.qodef-m-background-text {
+				font-size: 450px;
+				top: 34px;
+				left: 0;
+				right: 0;
+				text-align: center;
+			}
+		}
+	}
+
+	&.qodef-alignment--center {
+		.qodef-m-info {
+			text-align: center;
+		}
+	}
+
+	&.qodef-alignment--right {
+		.qodef-m-info {
+			text-align: right;
+		}
+	}
+}
+/* ==========================================================================
+   Info Section Background Text shortcode styles
+   ========================================================================== */

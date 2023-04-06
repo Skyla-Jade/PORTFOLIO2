@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Info Section Background Text shortcode responsive styles
+   ========================================================================== */
+.qodef-info-section {
+	&.qodef-layout--background-text {
+
+		@include qodefScreenSize1024 {
+
+			.qodef-m-background-text {
+				font-size: 110px;
+			}
+		}
+
+		@include qodefScreenSize480 {
+
+			.qodef-m-background-text {
+				font-size: 65px;
+			}
+
+			&.qodef-background-text-pos--top-left {
+
+				.qodef-m-background-text {
+					display: none;
+				}
+			}
+		}
+	}
+}

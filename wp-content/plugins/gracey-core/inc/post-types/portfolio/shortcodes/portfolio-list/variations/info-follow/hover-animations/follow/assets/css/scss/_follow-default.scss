@@ -1,0 +1,135 @@
+/* ==========================================================================
+   Portfolio List shortcode variation hover styles
+   ========================================================================== */
+
+.qodef-portfolio-list.qodef-item-layout--info-follow.qodef-hover-animation--follow {
+
+	.qodef-e-inner {
+		overflow: hidden;
+		
+		//.qodef-e-media-image {
+		//	a, span {
+		//		display: inline-block;
+		//	}
+		//}
+	}
+
+	.qodef-e-content {
+		display: none;
+	}
+
+	&.qodef-invert-colors {
+
+		article {
+			&:hover {
+				.qodef-e-image {
+					img {
+						filter: invert(1);
+					}
+				}
+			}
+
+			.qodef-e-image {
+				img {
+					display: inline-block;
+					transition: all .5s cubic-bezier(0.15, 0.84, 0.13, 0.96);
+				}
+			}
+		}
+		
+		//@include qodefScreenSize1024 {
+		//	article {
+		//		pointer-events: none;
+		//		touch-action: none;
+		//
+		//		a {
+		//			pointer-events: all;
+		//			touch-action: auto;
+		//		}
+		//	}
+		//}
+	}
+}
+
+.qodef-follow-info-holder {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 9999;
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+	margin-top: -87px;
+	margin-left: -83px;
+	background: #fff;
+	box-shadow: 0 1px 12.87px 0.13px rgba(0, 0, 0, 0.08);
+	transition: opacity .25s ease-out, transform .25s ease-out;
+
+	@include qodefScreenSize1024 {
+		display: none;
+	}
+	
+	&.qodef-bg-color-disabled {
+		background-color: transparent;
+		box-shadow: none;
+	}
+
+	&.qodef-right {
+		text-align: right;
+		transform: translateX(-47%);
+	}
+
+	.qodef-follow-info-inner {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin: 95px 40px 46px;
+	}
+
+	.qodef-follow-info-title {
+		display: inline-block;
+		position: relative;
+		white-space: nowrap;
+		z-index: 8;
+		padding: 0 0 4px;
+		margin-top: 4px;
+
+		.qodef-e-title {
+			margin: 0;
+		}
+	}
+
+	.qodef-follow-info-category {
+		display: inline-block;
+		padding: 0;
+		white-space: nowrap;
+		z-index: 9;
+		font-size: 18px;
+
+		a:not(:last-child) {
+			&:after {
+				content: "/";
+				margin: 0 2px 0 3px;
+			}
+		}
+
+		a {
+			position: relative;
+
+			&:before {
+				content: '';
+				width: 100%;
+				height: 1px;
+				position: absolute;
+				left: 0;
+				bottom: 2px;
+				background-color: currentColor;
+			}
+		}
+	}
+
+	&.qodef-is-active {
+		visibility: visible;
+		opacity: 1;
+	}
+}

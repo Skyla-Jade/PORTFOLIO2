@@ -1,0 +1,11 @@
+/* Clients list shortcode style - start */
+.qodef-clients-list {
+	.qodef-e {
+		@include qodefRelativeLayout();
+	}
+	
+	.qodef-e-title {
+		display: none;
+	}
+}
+/* Clients list shortcode style - end */

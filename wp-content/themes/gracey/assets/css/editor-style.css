@@ -1,0 +1,340 @@
+/* ==========================================================================
+   Include variables and mixins
+   ========================================================================== */
+/* ==========================================================================
+   Global CSS variables
+   ========================================================================== */
+:root {
+  --qode-main-color: #000;
+}
+
+/* ==========================================================================
+   Typography variables
+   ========================================================================== */
+/* ==========================================================================
+   Box variables
+   ========================================================================== */
+/* ==========================================================================
+   Devices screen size variables
+   ========================================================================== */
+/* ==========================================================================
+   Typography mixins
+   ========================================================================== */
+/* ==========================================================================
+   Typography mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Menu mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Menu mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Layout mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Layout mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Input fields mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Input fields mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Pagination mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Pagination mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Grid size mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Grid size mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Helper mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Helper mixins - end
+   ========================================================================== */
+/* ==========================================================================
+   Clear fix mixin - begin
+   ========================================================================== */
+/* ==========================================================================
+   Clear fix mixin - end
+   ========================================================================== */
+/* ==========================================================================
+   Custom mixins - begin
+   ========================================================================== */
+/* ==========================================================================
+   Custom mixins - end
+   ========================================================================== */
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  line-height: 1.625em;
+  font-weight: 300;
+  color: #000;
+  background-color: #fff;
+}
+
+h1 {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 53px;
+  line-height: 1.15em;
+  letter-spacing: 0.02em;
+  margin: 20px 0;
+}
+
+h1 a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+h1 a:focus, h1 a:hover {
+  color: var(--qode-main-color);
+}
+
+h2 {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 45px;
+  line-height: 1.18em;
+  letter-spacing: 0.04em;
+  margin: 20px 0;
+}
+
+h2 a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+h2 a:focus, h2 a:hover {
+  color: var(--qode-main-color);
+}
+
+h3 {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 35px;
+  line-height: 1.17em;
+  letter-spacing: 0.04em;
+  margin: 20px 0;
+}
+
+h3 a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+h3 a:focus, h3 a:hover {
+  color: var(--qode-main-color);
+}
+
+h4 {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 27px;
+  line-height: 1.26em;
+  letter-spacing: 0.04em;
+  margin: 20px 0;
+}
+
+h4 a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+h4 a:focus, h4 a:hover {
+  color: var(--qode-main-color);
+}
+
+h5 {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 22px;
+  line-height: 1.18em;
+  letter-spacing: 0.04em;
+  margin: 20px 0;
+}
+
+h5 a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+h5 a:focus, h5 a:hover {
+  color: var(--qode-main-color);
+}
+
+h6 {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000;
+  font-size: 17px;
+  line-height: 1.35em;
+  letter-spacing: 0.04em;
+  margin: 20px 0;
+}
+
+h6 a {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+}
+
+h6 a:focus, h6 a:hover {
+  color: var(--qode-main-color);
+}
+
+a,
+p a {
+  color: #000;
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  cursor: pointer;
+}
+
+a:focus, a:hover,
+p a:focus,
+p a:hover {
+  color: var(--qode-main-color);
+}
+
+p {
+  margin: 10px 0;
+}
+
+blockquote {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  padding: 30px 5% 21px 5%;
+  border: none;
+  text-align: center;
+  font-family: "Krona One", sans-serif;
+  font-size: 20px;
+  line-height: 1.4em;
+  letter-spacing: 0.02em;
+  color: #000;
+  text-transform: uppercase;
+  quotes: none;
+  z-index: 1;
+}
+
+blockquote.wp-block-quote.is-large, blockquote.wp-block-quote.is-style-large {
+  margin: 0;
+  padding: 18px 10% 20px 0;
+}
+
+blockquote.wp-block-pullquote {
+  padding: 25px !important;
+  text-align: center;
+}
+
+blockquote.wp-block-pullquote.alignleft {
+  max-width: 290px;
+}
+
+blockquote.wp-block-pullquote.alignright {
+  max-width: 290px;
+}
+
+blockquote.has-text-align-right:before {
+  left: auto;
+  right: 0;
+}
+
+blockquote:before {
+  content: url(../img/quote.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 125px;
+  width: 190px;
+  opacity: 0.14;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+blockquote > * {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+blockquote p {
+  margin: 0 !important;
+}
+
+blockquote:after {
+  content: '';
+}
+
+blockquote cite {
+  display: block;
+  margin: 10px 0 0;
+  font-style: normal;
+  font-weight: 400 !important;
+  text-align: inherit !important;
+  text-transform: uppercase !important;
+}

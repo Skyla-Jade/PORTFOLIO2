@@ -1,0 +1,168 @@
+/* ==========================================================================
+   Intro Section responsive style - begin
+   ========================================================================== */
+@include qodefScreenSize1680 {
+	.qodef-intro-section {
+		.qodef-m-items {
+			margin-bottom: 1%;
+		}
+		
+		.qodef-e-item {
+			&:nth-of-type(1) {
+				padding: 6% 6% 3% 0%;
+			}
+			
+			&:nth-of-type(2) {
+				padding: 5% 10% 0% 3%;
+			}
+			
+			&:nth-of-type(3) {
+				padding: 0% 0% 10% 3%;
+			}
+			
+			&:nth-of-type(4) {
+				padding: 10% 0%;
+			}
+			
+			&:nth-of-type(5) {
+				padding: 6% 0% 3% 5%;
+			}
+		}
+	}
+}
+
+@include qodefScreenSize1440 {
+	.qodef-intro-section {
+		.qodef-e-item {
+			&:nth-of-type(1) {
+				.qodef-e-item-inner {
+					margin: 2% -6% 0 0;
+				}
+			}
+			
+			&:nth-of-type(2) {
+				.qodef-e-item-inner {
+					margin: 0 6% -4% 0;
+				}
+			}
+			
+			&:nth-of-type(4) {
+				padding: 12% 0%;
+				
+				.qodef-e-item-inner {
+					margin: 4% 0 0 -4%;
+				}
+			}
+			
+			&:nth-of-type(5) {
+				.qodef-e-item-inner {
+					margin: 1.5% 0 0 -9%;
+				}
+			}
+		}
+	}
+}
+
+@include qodefScreenSize1366 {
+	.qodef-intro-section {
+		.qodef-e-item {
+			&:nth-of-type(1) .qodef-e-item-inner {
+				margin: 2% 1% 0 0;
+			}
+			
+			&:nth-of-type(4) {
+				padding: 9% 0;
+				
+				.qodef-e-item-inner {
+					margin: 4% 0 0 -6%;
+				}
+			}
+			
+			&:nth-of-type(5) {
+				.qodef-e-item-inner {
+					margin: 1.5% 0 0 -2%;
+				}
+			}
+		}
+	}
+}
+
+@include qodefScreenSize1024 {
+	.qodef-intro-section {
+		.qodef-e-item {
+			.qodef-e-item-inner {
+				height: 70vh;
+			}
+			&:nth-of-type(1) {
+				.qodef-e-item-inner {
+					margin: 2% -16% 0 0;
+				}
+			}
+			
+			&:nth-of-type(5) {
+				.qodef-e-item-inner {
+					margin: 1.5% 0 0 -6%;
+				}
+			}
+		}
+		
+		&.qodef--has-appear {
+			.qodef-e-item {
+				&:nth-of-type(4) {
+					transition-delay: .5s, .5s;
+				}
+
+				&:nth-of-type(5) {
+					transition-delay: 1s, 1s;
+				}
+			}
+			
+			.qodef-custom-font-holder {
+				transition-delay: .7s;
+			}
+		}
+	}
+}
+
+@include qodefScreenSize768 {
+	.qodef-intro-section {
+		.qodef-e-item {
+			&:nth-of-type(1) {
+				.qodef-e-item-inner {
+					margin: 2% -10% 0 0;
+				}
+			}
+		}
+	}
+}
+
+@include qodefScreenSize680 {
+	.qodef-intro-section {
+		.qodef-e-item {
+			&:nth-of-type(5) {
+				padding: 0%;
+				
+				.qodef-e-item-inner {
+					margin: 0% 0 0 0%;
+				}
+			}
+		}
+		
+		&.qodef--has-appear {
+			.qodef-e-item {
+				&:nth-of-type(5) {
+					transition-delay: 0s, 0s;
+				}
+			}
+		}
+		
+		.qodef-m-text-holder {
+			transform: translate(-50%,calc(-50% - 50px));
+		}
+	}
+}
+
+
+/* ==========================================================================
+   Intro Section responsive style - end
+   ========================================================================== */

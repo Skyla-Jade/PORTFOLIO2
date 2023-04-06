@@ -1,0 +1,57 @@
+/* ==========================================================================
+   Global styles
+   ========================================================================== */
+
+.gracey-core-page-inline-style {
+	position: absolute !important;
+	width: 0;
+	height: 0;
+	line-height: 1;
+	display: none;
+}
+
+.qodef-svg-distort-filter {
+	@include qodefAbsoluteLayout();
+	pointer-events: none;
+	z-index: -1;
+}
+
+.qodef--item-filter-holder {
+	@at-root .qodef-browser--safari &{
+		transform: translateZ(0);
+	}
+}
+
+.qodef--distort-animation {
+	overflow: visible;
+	
+	&.qodef--distort-hide-overflow {
+		overflow: hidden;
+		position: relative;
+		
+		.qodef--distort-img-clone {
+			@include qodefAbsoluteLayout();
+		}
+	}
+}
+
+.qodef--distort-animation-list {
+	.qodef--item-filter-holder {
+		display: block;
+	}
+	
+	.qodef-e-image {
+		position: relative;
+	}
+	
+	.qodef--distort-img-clone {
+		@include qodefAbsoluteLayout();
+		display: none;
+	}
+	
+	&.qodef--distort-hide-overflow {
+		.qodef-e-image {
+			overflow: hidden;
+		}
+	}
+}

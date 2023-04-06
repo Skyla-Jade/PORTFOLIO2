@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Portfolio Vertical Slider shortcode responsive styles
+   ========================================================================== */
+
+.qodef-portfolio-vertical-slider {
+
+    @media only screen and (min-width: 1921px) {
+        .swiper-container {
+            article {
+                .qodef-e-media-image {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include qodefScreenSize1440 {
+        .qodef-pvs-fixed-item {
+            padding-top: 0;
+        }
+    }
+
+    @include qodefScreenSize1024 {
+
+        .qodef-pvs-fixed-item {
+            .qodef-e-excerpt {
+                max-width: 100%;
+            }
+        }
+    }
+
+    @include qodefScreenSize680 {
+
+        .swiper-container {
+
+            article {
+
+                .qodef-e-inner {
+                    display: block;
+
+                    > * {
+                        width: 100%;
+                    }
+                }
+
+                .qodef-e-image {
+                    height: auto;
+
+                    .qodef-e-media-background-image {
+                        display: none;
+                    }
+
+                    .qodef-e-media-image {
+                        display: block;
+                    }
+                }
+
+                .qodef-e-content {
+                    margin: 70px 0 0;
+                    padding: 0 30px;
+                    position: relative;
+
+                    .qodef-e-number {
+                        font-family: $heading-font;
+                        font-size: 120px;
+                        line-height: .85em;
+                        font-weight: 400;
+                        letter-spacing: .04em;
+                        display: block;
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke-width: 1px;
+                        -webkit-text-stroke-color: rgba($heading-color, 0.14);
+                        position: absolute;
+                        top: -40px;
+                        left: 10px;
+                    }
+
+                    .qodef-e-excerpt {
+                        margin: 10px 0 0;
+                    }
+
+                    .qodef-e-read-more {
+                        margin: 15px 0 0;
+                    }
+                }
+            }
+        }
+
+        .qodef-pvs-custom-widget-area {
+            display: none;
+        }
+    }
+}

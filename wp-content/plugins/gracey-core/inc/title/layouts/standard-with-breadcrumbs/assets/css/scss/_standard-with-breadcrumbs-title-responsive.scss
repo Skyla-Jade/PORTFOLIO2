@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Standard Title layout responsive styles
+   ========================================================================== */
+
+.qodef-page-title.qodef-title--standard-with-breadcrumbs {
+
+	@include qodefScreenSize680 {
+
+		.qodef-m-content {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+
+			.qodef-breadcrumbs {
+				width: 100%;
+				margin: 8px 0 0;
+			}
+		}
+	}
+}

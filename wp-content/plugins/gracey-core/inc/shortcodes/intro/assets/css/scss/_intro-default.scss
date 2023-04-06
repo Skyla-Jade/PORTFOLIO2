@@ -1,0 +1,217 @@
+/* ==========================================================================
+   Intro Section style - begin
+   ========================================================================== */
+
+.qodef-intro-section {
+	@include qodefRelativeLayout();
+	
+	.qodef-m-inner {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 30px 0 15px;
+	}
+	
+	.qodef-m-items {
+		height: 100%;
+		width: 100%;
+		position: relative;
+		margin-bottom: 5%;
+	}
+	
+	.qodef-e-item {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		$stages: ('1440', '1366', '1280', '1024', '768', '680', '480');
+		@for $i from 0 to length($stages) {
+			&.qodef-hide-on--#{nth($stages,$i+1)} {
+				
+				@media only screen and (max-width: #{nth($stages,$i+1)}px) {
+					display: none;
+				}
+			}
+		}
+		
+		&:nth-of-type(1){
+			.qodef-e-item-inner {
+				margin: 2% 2% 0 0;
+			}
+		}
+		
+		&:nth-of-type(2){
+			.qodef-e-item-inner {
+				margin: 0 5% -3% 0;
+			}
+		}
+		
+		&:nth-of-type(3){
+			.qodef-e-item-inner {
+				margin: 0 0 0 10%;
+			}
+		}
+		
+		&:nth-of-type(4){
+			.qodef-e-item-inner {
+				margin: 4%  0 0 -1%;
+			}
+		}
+		
+		&:nth-of-type(5){
+			.qodef-e-item-inner {
+				margin: 1.5% 0 0 5%;
+			}
+		}
+	}
+	
+	.qodef-e-item-inner {
+		display: inline-flex;
+		max-width: 100%;
+		max-height: 100%;
+		transform: rotate(var(--qodef-rotate, 0));
+		
+		img {
+			object-fit: contain;
+		}
+	}
+	
+	.qodef-m-stamp-holder {
+		display: flex;
+		justify-content: center;
+	}
+	
+	.qodef-m-text-holder {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+	}
+	
+	.qodef-e-text {
+		text-align: center;
+	}
+	
+	.qodef-e-text {
+		position: relative;
+		
+		.b-canvas {
+			position: absolute;
+			top: 0;
+			left: -100px;
+			text-align: center;
+		}
+		
+		.qodef--hidden-text {
+			opacity: 0;
+		}
+	}
+	
+	&.qodef--has-disappear {
+		//overflow: hidden;
+		
+		&.qodef-hide-overflow {
+			overflow: hidden;
+		}
+		
+		.qodef-m-text-holder{
+			overflow: hidden;
+			padding: 1em 0;
+			
+			.qodef-custom-font-holder {
+				padding: 0 50px;
+				
+				.b-canvas {
+					left: -50px;
+				}
+			}
+		}
+	}
+	
+	&.qodef--has-appear {
+		.qodef-e-item {
+			opacity: 0;
+			transform: translate3d(70%,30%,0);
+			transition: opacity .4s cubic-bezier(.22, .61, .36, 1), 1s transform cubic-bezier(.18, .79, .48, .99);
+			
+			&:nth-of-type(2) {
+				transform: translate3d(-70%,-100%, 0) rotate(-20deg);
+				transition-delay: .3s , .3s;
+			}
+			
+			&:nth-of-type(3) {
+				transform: translate3d(20%, -90%, 0) rotate(40deg);
+				transition-delay: .6s , .6s;
+			}
+			
+			&:nth-of-type(4) {
+				transform: translate3d(-90%, 120%, 0) rotate(-30deg);
+				transition-delay: 1s , 1s;
+			}
+			
+			&:nth-of-type(5) {
+				transform: translate3d(10%, -70%, 0) rotate(35deg);
+				transition-delay: 1.5s, 1.5s;
+			}
+			
+			@for $i from 6 to 15 {
+				&:nth-of-type(#{$i}) {
+					transition-delay: $i * .35s;
+				}
+			}
+		}
+		
+		.qodef-custom-font-holder {
+			opacity: 0;
+			transform: translate3d(0, 100%, 0);
+			transition: opacity .4s cubic-bezier(.22, .61, .36, 1), 1.2s transform cubic-bezier(.18, .79, .48, .99);
+			transition-delay: 1.7s;
+		}
+		
+		&.qodef-disappear {
+			z-index: 2;
+			
+			.qodef-e-item {
+				transition: opacity .7s cubic-bezier(.22, .61, .36, 1) .5s, transform 1.2s cubic-bezier(.18, .79, .48, .99);
+				
+				@for $i from 1 to 15 {
+					&:nth-of-type(#{$i}) {
+						//transition-delay: $i * .1s;
+						transition-delay: .5s + $i * .2s, $i * .2s!important;
+					}
+				}
+			}
+			
+			.qodef-custom-font-holder {
+				transition-delay: 0s;
+			}
+		}
+		
+		&.qodef-appear {
+			.qodef-e-item {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+
+			.qodef-custom-font-holder {
+				opacity: 1;
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+}
+
+.qodef--landing-intro-section {
+	~ section {
+		transform: translateY(100vh);
+	}
+}
+
+/* ==========================================================================
+   Intro Section style - end
+   ========================================================================== */

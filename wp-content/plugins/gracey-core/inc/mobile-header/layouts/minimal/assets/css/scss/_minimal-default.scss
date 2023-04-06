@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Mobile header layout styles
+   ========================================================================== */
+
+.qodef-mobile-header--minimal #qodef-page-mobile-header-inner {
+	justify-content: flex-end;
+	
+	.qodef-mobile-header-logo-link {
+		margin-right: auto;
+	}
+	
+	.qodef-opener-icon {
+		margin-left: 20px;
+	}
+}
+
+.qodef-fullscreen-menu--opened {
+    overflow-y: hidden;
+	
+	#qodef-page-mobile-header .qodef-mobile-header-logo-link {
+
+		img {
+
+			&.qodef--light {
+				opacity: 1;
+			}
+
+			&.qodef--main,
+			&.qodef--dark {
+				opacity: 0;
+			}
+		}
+
+		&.qodef-source--svg-path,
+		&.qodef-source--textual {
+			color: $header-light-skin-color !important;
+
+			&:hover {
+				color: $header-light-skin-hover-color !important;
+			}
+		}
+	}
+}
+
+.qodef-mobile-header--minimal {
+	&.qodef-minimal-mobile-header--light {
+
+		#qodef-page-mobile-header {
+			.qodef-mobile-header-logo-link {
+				img {
+					&.qodef--main {
+						opacity: 0;
+					}
+
+					&.qodef--light {
+						opacity: 1;
+					}
+				}
+			}
+		}
+
+		#qodef-page-mobile-header-inner {
+			.qodef-opener-icon {
+				&:not(.qodef--opened) {
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.qodef-overflow {
+	.qodef-mobile-header--minimal {
+		#qodef-page-mobile-header {
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+		}
+	}
+}

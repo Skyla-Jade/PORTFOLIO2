@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Call to Action shortcode responsive styles
+   ========================================================================== */
+
+.qodef-call-to-action {
+	
+	&.qodef-layout--standard {
+
+		@include qodefScreenSize1440 {
+			.qodef-m-background-text {
+				font-size: 130px;
+			}
+		}
+
+		@include qodefScreenSize1366 {
+			.qodef-m-text {
+				padding-top: 25px;
+			}
+		}
+
+		@include qodefScreenSize1280 {
+			.qodef-m-background-text {
+				font-size: 100px;
+			}
+
+			.qodef-m-text {
+				padding-top: 15px;
+			}
+		}
+
+		@include qodefScreenSize1024 {
+			.qodef-m-inner {
+				display: block;
+			}
+
+			.qodef-m-button {
+				margin-top: 20px;
+			}
+
+			.qodef-m-background-text {
+				display: none;
+			}
+		}
+	}
+}

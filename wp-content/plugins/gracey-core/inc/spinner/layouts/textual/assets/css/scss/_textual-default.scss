@@ -1,0 +1,12 @@
+/* ==========================================================================
+   Spinner layout styles
+   ========================================================================== */
+
+#qodef-page-spinner {
+	&.qodef-layout--textual {
+		.qodef-stamp,
+		.qodef-m-centred-icon {
+			color: currentColor;
+		}
+	}
+}

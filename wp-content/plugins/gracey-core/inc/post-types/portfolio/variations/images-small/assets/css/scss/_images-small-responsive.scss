@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Portfolio Single variation styles
+   ========================================================================== */
+
+.qodef-portfolio-single {
+    
+    &.qodef-layout--images-small {
+        
+        @include qodefScreenSize1024 {
+            .qodef-portfolio-title {
+                margin-top: 5px;
+            }
+        }
+    }
+}

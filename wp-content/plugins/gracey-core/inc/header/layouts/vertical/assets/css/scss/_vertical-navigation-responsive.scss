@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Header Vertical navigation responsive style - begin
+   ========================================================================== */
+
+.qodef-header--vertical {
+    .qodef-header-vertical-navigation {
+
+        @include qodefScreenSize1440 {
+            margin-top: 20%;
+        }
+
+    }
+}

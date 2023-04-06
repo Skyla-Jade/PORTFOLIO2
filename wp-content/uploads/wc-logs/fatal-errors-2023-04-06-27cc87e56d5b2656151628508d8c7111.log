@@ -1,0 +1,2 @@
+2023-04-06T10:39:12+00:00 CRITICAL Allowed memory size of 268435456 bytes exhausted (tried to allocate 53922240 bytes) in /Applications/MAMP/htdocs/PORTFOLIO2/wp-content/plugins/woocommerce/packages/woocommerce-blocks/src/Assets/AssetDataRegistry.php on line 375
+

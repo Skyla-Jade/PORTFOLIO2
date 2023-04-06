@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Opener icon styles
+   ========================================================================== */
+
+.qodef-opener-icon {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 1;
+	
+	.qodef-m-icon {
+		position: relative;
+		visibility: visible;
+		
+		&.qodef--close {
+			position: absolute;
+			top: 0;
+			left: 0;
+			visibility: hidden;
+		}
+	}
+	
+	&.qodef-source--icon-pack {
+		font-size: 35px;
+		
+		* {
+			display: inline-block;
+			line-height: inherit;
+			
+			&:before {
+				display: inline-block;
+				line-height: inherit;
+			}
+		}
+	}
+	
+	&.qodef-source--svg-path {
+		
+		span {
+			position: relative;
+			
+			> * {
+				vertical-align: middle;
+			}
+			
+			> *,
+			path {
+				fill: currentColor;
+				stroke: currentColor;
+			}
+		}
+	}
+	
+	&.qodef-source--predefined {
+		
+		.qodef-m-lines {
+			position: relative;
+			display: block;
+			width: 35px;
+			height: 30px;
+			transition: transform .4s cubic-bezier(.39,.1,0,.98);
+		}
+		
+		.qodef-m-line {
+			position: absolute;
+			left: 0;
+			height: 4px;
+			width: 100%;
+			background-color: currentColor;
+			transition: top .4s cubic-bezier(.39,.1,0,.98), transform .4s cubic-bezier(.39,.1,0,.98);
+			
+			&.qodef--1 {
+				top: 6px;
+			}
+			
+			&.qodef--2 {
+				top: 18px;
+			}
+		}
+		
+		&:hover {
+			#qodef-page-header:not(.qodef-vertical-sliding-menu--opened) &{
+				.qodef--open .qodef-m-line {
+					&.qodef--1 {
+						transform: translateX(4px);
+					}
+					&.qodef--2 {
+						transform: translateX(-4px);
+					}
+				}
+			}
+			
+			header:not(#qodef-page-mobile-header) & {
+				.qodef--close .qodef-m-lines {
+					transform: rotate(45deg);
+				}
+			}
+		}
+	}
+}

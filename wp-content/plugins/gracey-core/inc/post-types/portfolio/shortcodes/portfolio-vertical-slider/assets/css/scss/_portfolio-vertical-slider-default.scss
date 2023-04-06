@@ -1,0 +1,233 @@
+/* ==========================================================================
+   Portfolio Vertical Slider shortcode styles
+   ========================================================================== */
+
+.qodef-portfolio-vertical-slider {
+	@include qodefRelativeLayout(top);
+	height: 100vh;
+	visibility: hidden;
+
+	&.qodef-init {
+		visibility: visible;
+	}
+
+	.swiper-wrapper {
+		margin: 0 !important;
+	}
+
+	.swiper-container {
+		height: 100%;
+
+		article {
+			padding: 0 !important;
+
+			&.swiper-slide-active {
+
+				.qodef-e-image {
+
+					&:after {
+						opacity: 1;
+					}
+				}
+
+				.qodef-e-content {
+					opacity: 1;
+				}
+			}
+
+			.qodef-e-inner {
+				display: flex;
+				align-items: center;
+				height: 100%;
+
+				> * {
+					width: 50%;
+					flex-shrink: 0;
+				}
+			}
+
+			.qodef-e-image {
+				height: 100%;
+				overflow: hidden;
+				position: relative;
+
+				> a {
+					@include qodefAbsoluteLayout();
+				}
+			}
+
+			.qodef-e-media-background-image {
+				height: 100%;
+				width: 100%;
+				background-position: center;
+				background-size: cover;
+			}
+
+			.qodef-e-media-image {
+				//display: none;
+				height: 100%;
+				object-fit: cover;
+
+				img {
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			
+			.qodef-e-media-clone {
+				@include qodefAbsoluteLayout();
+				z-index: -1;
+			}
+
+			.qodef-e-title {
+				margin: 0;
+
+				a {
+					position: relative;
+					color: inherit;
+				}
+			}
+
+			.qodef-e-excerpt {
+				display: block;
+				margin: 24px 0 0;
+				font-size: 18px;
+
+				@media only screen and (min-width: $screen-size-1025) {
+					max-width: 70%;
+				}
+			}
+
+			.qodef-btn {
+				margin-top: 22px;
+			}
+		}
+	}
+
+	//fixed content
+	.qodef-pvs-fixed-content {
+		display: none;
+	}
+
+	.qodef-pvs-fixed-item {
+
+		> div {
+			position: relative;
+			margin-top: 60px;
+		}
+
+		.qodef-e-number {
+			font-family: $heading-font;
+			font-size: 150px;
+			line-height: 0.85em;
+			font-weight: 400;
+			letter-spacing: 0.04em;
+			display: block;
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: rgba($heading-color, 0.14);
+		}
+
+		.qodef-e-additional-info {
+			display: block;
+			font-size: 18px;
+			margin: 0 0 11px;
+		}
+
+		.qodef-e-title {
+			margin: 0;
+		}
+
+		.qodef-e-excerpt {
+			display: block;
+			margin: 16px 0 0;
+		}
+
+		.qodef-e-read-more {
+			margin: 36px 0 0;
+			z-index: 1;
+		}
+	}
+
+	.qodef-pvs-custom-widget-area {
+		position: absolute;
+		left: 50%;
+		bottom: 30px;
+		margin-left: 6.2%;
+		z-index: 98;
+	}
+
+	@media screen and (min-width: 768px) {
+		article {
+			.qodef-e-content {
+				display: none;
+			}
+		}
+
+		.qodef-pvs-fixed-content {
+			display: block;
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 100vh;
+			width: 50%;
+			z-index: 97;
+		}
+
+		.qodef-pvs-fixed-item {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			padding: 40px 12.4% 0;
+			box-sizing: border-box;
+			opacity: 0;
+			transition: opacity .3s;
+
+			.qodef-mask {
+				position: relative;
+				overflow: hidden;
+				display: inline-block;
+
+				> * {
+					//transform-origin: 0 0;
+					display: inline-block;
+				}
+
+				&:first-child {
+					position: absolute;
+					top: -57px;
+					left: -25px;
+				}
+				
+				&.qodef-excerpt-mask {
+					max-width: 67%;
+				}
+			}
+
+			&.qodef-show {
+				transition: none;
+				opacity: 1;
+				z-index: 999;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: $screen-size-1025) {
+	.qodef-portfolio-vertical-slider-initialized {
+		&.qodef-header--minimal:not(.qodef-fullscreen-menu--opened) {
+			#qodef-page-header-inner {
+				.qodef-header-logo-link {
+					position: absolute;
+					top: 0;
+					left: 50%;
+					margin-left: 40px;
+				}
+			}
+		}
+	}
+}

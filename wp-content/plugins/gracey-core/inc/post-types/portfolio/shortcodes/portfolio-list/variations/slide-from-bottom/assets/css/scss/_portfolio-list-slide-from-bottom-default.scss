@@ -1,0 +1,83 @@
+/* ==========================================================================
+   Portfolio List shortcode variation styles
+   ========================================================================== */
+
+.qodef-portfolio-list {
+	
+	&.qodef-item-layout--slide-from-bottom {
+		
+		article {
+			perspective: 1px;
+			
+			&:hover {
+				.qodef-e-content {
+					transform: translate3d(0px, 0, 0);
+				}
+				
+				.qodef-e-content-inner {
+					opacity: 1;
+				}
+			}
+			
+			.qodef-e-inner {
+				overflow: hidden;
+			}
+			
+			.qodef-e-content {
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: auto;
+				bottom: 0;
+				left: 0;
+				padding: 32px 29px 29px;
+				background-color: #fff;
+				overflow: hidden;
+				box-sizing: border-box;
+				//will-change: transform;
+				//backface-visibility: hidden;
+				transform: translate3d(0, 101%, 0);
+				transition: transform .6s cubic-bezier(0.24, 0.79, 0.28, 0.93);
+				-webkit-font-smoothing: antialiased;
+			}
+			
+			.qodef-e-content-inner {
+				opacity: 0;
+				//transform: translate3d(40px, 40px, 0);
+				//transition: opacity .4s cubic-bezier(.22, .61, .36, 1), .6s transform cubic-bezier(.18, .79, .48, .99);
+				transition: opacity .4s cubic-bezier(.22, .61, .36, 1) .01s;
+			}
+			
+			.qodef-e-title {
+				font-size: 18px;
+			}
+			
+			.qodef-e-info-category {
+				font-size: 18px;
+				margin-top: 1px;
+			}
+			
+			.qodef-e-category {
+				position: relative;
+				
+				@at-root body.qodef-browser--firefox &{
+					display: inline-block;
+					
+					&:after {
+						bottom: 3px;
+					}
+				}
+				
+				&:after {
+					@include qodefUnderline();
+				}
+				
+				&:hover {
+					&:after {
+						@include qodefUnderlineHover();
+					}
+				}
+			}
+		}
+	}
+}

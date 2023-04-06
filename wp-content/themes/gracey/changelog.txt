@@ -1,0 +1,17 @@
+1.1
+- Added WordPress 6.0.2 compatibility
+- Added WooCommerce 6.9.3 compatibility
+- Updated Revolution Slider to 6.5.31
+- Updated Qode Framework plugin to 1.1.9
+- Updated Gracey Core plugin to 1.1
+- Fixed Fade Out Animation and Lightbox issue
+- Fixed Sticky header logo not displaying svg icon
+- Fixed deprecated _register_controls function issue
+- Fixed custom class excluding for shortcodes
+- Fixed cart widgets in WordPress 5.8
+- Fixed legacy widgets import
+- Improved import for PHP8
+- Improved theme registration functionality
+- Improved theme registration to block Shortcodes and CPT loading if the theme is not registered
+- Improved theme registration - code already used case
+- Theme Validation Rest Endpoint

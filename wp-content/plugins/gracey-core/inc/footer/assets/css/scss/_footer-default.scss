@@ -1,0 +1,62 @@
+/* ==========================================================================
+   #Footer styles - start
+   ========================================================================== */
+
+.qodef-page-footer--uncover {
+	
+	#qodef-page-outer {
+		z-index: 90; // needs to be larger than the footer and lower than the header
+	}
+	
+	#qodef-page-footer {
+		
+		.no-touchevents & {
+			position: fixed;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+#qodef-page-footer {
+	&.qodef-skin--light {
+
+		.widget {
+			color: $heading-color;
+
+			.qodef-widget-title {
+				color: $heading-color;
+			}
+
+			a {
+				color: $heading-color;
+
+				* {
+					color: $heading-color;
+				}
+
+				&:hover {
+					color: $heading-color;
+				}
+			}
+
+			svg {
+				fill: $heading-color;
+				stroke: $heading-color;
+			}
+
+			.qodef-icon {
+				color: $heading-color !important;
+			}
+		}
+
+		#qodef-page-footer-top-area,
+		#qodef-page-footer-bottom-area {
+			background-color: #fff;
+		}
+	}
+}
+
+/* ==========================================================================
+   #Footer styles - end
+   ========================================================================== */

@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Portfolio Single responseive styles
+   ========================================================================== */
+
+.qodef-portfolio-single {
+	
+	@include qodefScreenSize1024 {
+
+		.qodef-variations--small {
+
+			.qodef-media {
+				margin: 0 0 84px;
+			}
+		}
+
+		.qodef-variations--big {
+
+			.qodef-portfolio-info {
+				margin-top: 34px;
+			}
+		}
+	}
+}

@@ -1,0 +1,103 @@
+/* ==========================================================================
+   #Back to Top styles - start
+   ========================================================================== */
+
+#qodef-back-to-top {
+	position: fixed;
+	width: 125px;
+	height: 125px;
+	right: 25px;
+	bottom: 25px;
+	margin: 0;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 10000;
+	
+	.qodef-back-to-top-icon {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		font-size: 20px;
+		color: var(--qode-main-color);
+		background-color: transparent;
+		border: 1px solid transparent;
+		overflow: hidden;
+		transition: $color-transition, $background-color-transition, $border-color-transition;
+	}
+	
+	&:not(.qodef--stamp-btt){
+		svg {
+			display: block;
+			width: 18px;
+			height: auto;
+			fill: currentColor;
+		}
+		
+		.qodef-back-to-top-icon {
+			* {
+				display: block;
+				line-height: inherit;
+			}
+		}
+	}
+	
+	&.qodef--stamp-btt {
+		mix-blend-mode: difference;
+		filter: invert(1);
+		
+		.qodef-back-to-top-icon {
+			.qodef-stamp,
+			.qodef-m-centred-icon {
+				color: currentColor;
+				
+				svg {
+					fill: currentColor;
+				}
+			}
+			
+			.qodef-stamp {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		
+		@include qodefScreenSize680(){
+			width: 95px;
+			height: 95px;
+			
+			.qodef-stamp {
+				font-size: 10px;
+			}
+		}
+	}
+	
+	&:hover {
+		.qodef-back-to-top-icon {
+			color: var(--qode-main-color);
+		}
+	}
+
+	&.qodef--light {
+		&:not(.qodef--stamp-btt.qodef-back-to-top-icon) {
+			color: #fff;
+		}
+	}
+	
+	&.qodef--off {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.15s ease, visibility .0s .15s;
+	}
+	
+	&.qodef--on {
+		opacity: 1;
+		visibility: visible;
+		transition: opacity 0.3s ease;
+	}
+}
+
+/* ==========================================================================
+   #Back to Top styles - end
+   ========================================================================== */

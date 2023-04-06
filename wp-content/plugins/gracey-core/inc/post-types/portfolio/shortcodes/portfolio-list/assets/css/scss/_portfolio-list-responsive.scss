@@ -1,0 +1,176 @@
+/* ==========================================================================
+   Portfolio List shortcode responsive styles
+   ========================================================================== */
+
+.qodef-portfolio-list {
+
+    @include qodefScreenSize1440 {
+        &.qodef-layout--masonry {
+            &.qodef-gutter--gigantic {
+                .qodef-intro-item {
+                    .qodef-intro-item-content {
+                        margin: 32% 0 4.6%;
+                    }
+                }
+            }
+
+            .qodef-intro-item {
+                .qodef-intro-item-content {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 1025px) {
+        &.qodef-layout--horizontal_slider {
+            .qodef-e-image {
+                height: 100%;
+
+                .qodef-e-media-image {
+                    height: 100%;
+
+                    img,
+                    .qodef--item-filter-holder {
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+
+    @include qodefScreenSize1024 {
+
+        &.qodef-layout--full_slider {
+            height: calc(100vh - 70px);
+
+            .admin-bar & {
+                height: calc(100vh - 70px - 32px);
+            }
+
+            article {
+                .qodef-e-image {
+                    img {
+                        height: calc(100vh - 70px);
+
+                        .admin-bar & {
+                            height: calc(100vh - 70px - 32px);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &.qodef-layout--horizontal_slider {
+            .qodef-horizontal-custom-content {
+                max-width: 380px;
+            }
+
+            .qodef-items-holder {
+                margin-left: 35%;
+            }
+
+            article {
+                width: 30vw;
+            }
+        }
+
+        &.qodef-layout--masonry {
+            &.qodef-grid.qodef-gutter--gigantic {
+                > .qodef-grid-inner {
+                    margin: 0 -40px;
+
+                    > .qodef-grid-item {
+                        padding: 0 40px;
+                        margin: 0 0 80px;
+                    }
+                }
+            }
+
+            article {
+                .qodef-e-inner {
+                    padding-bottom: 0 !important;
+                }
+            }
+
+            .qodef-intro-item {
+                .qodef-intro-item-content {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    @include qodefScreenSize768 {
+        &.qodef-layout--horizontal_slider {
+
+            .qodef-items-holder {
+                margin-left: 44%;
+            }
+
+            article {
+                width: 50vw;
+            }
+        }
+    }
+
+    @include qodefScreenSize680 {
+        &.qodef-layout--horizontal_slider {
+
+            .qodef-horizontal-custom-content {
+                position: relative;
+                padding: 0 7%;
+            }
+
+            .qodef-items-holder {
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                padding: 0 7%;
+
+                .qodef-items-holder-inner {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            article {
+                width: 100%;
+                margin: 0;
+                float: none;
+                padding-bottom: 30px;
+
+                &.qodef--appear {
+                    opacity: 1;
+                }
+            }
+
+        }
+    }
+
+    @include qodefScreenSize480 {
+        &.qodef-layout--horizontal_slider {
+            height: 100%;
+
+            .qodef-horizontal-custom-content {
+                padding: 30px 30px 50px;
+            }
+
+            .qodef-items-holder {
+                padding: 0 30px;
+            }
+        }
+
+        &.qodef-layout--masonry {
+            &.qodef-gutter--gigantic {
+                .qodef-intro-item {
+                    .qodef-intro-item-content {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

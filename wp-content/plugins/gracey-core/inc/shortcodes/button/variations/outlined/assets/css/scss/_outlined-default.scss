@@ -1,0 +1,19 @@
+.qodef-button {
+
+    &.qodef-layout--outlined {
+        @include qodefButtonOutlinedColor();
+
+        .qodef-btn-icon {
+            padding-right: 3px;
+            top: 3px;
+        }
+    
+        &:not(.qodef-theme-button){
+            margin-right: 3px;
+        }
+    
+        &:hover {
+            @include qodefButtonOutlinedHoverColor();
+        }
+    }
+}

@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Vertical Sliding navigation style
+   ========================================================================== */
+
+$menu-top-bottom-spacing: 14px 0 0;
+$menu-level-two-left-spacing: 9px;
+
+.qodef-header--vertical-sliding {
+    
+    .qodef-header-vertical-sliding-navigation {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        padding: 0 43px;
+        width: 100%;
+        z-index: 100;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                margin: 0;
+                padding: 0;
+                position: relative;
+
+                .qodef-drop-down-second {
+                    transform: translateZ(0);
+                }
+
+                .qodef-drop-down-second-inner {
+                    display: block;
+                    padding: 0;
+                    position: relative;
+                    z-index: 997;
+                }
+
+                &.qodef--hide-link {
+                    
+                    > a {
+                        cursor: default;
+                    }
+                }
+
+                a {
+
+                    .qodef-menu-item-arrow {
+                        display: none;
+                    }
+
+                    > span {
+                        position: relative;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            bottom: 5px;
+                            left: 0;
+                            height: 1px;
+                            width: calc(100% - .02em);
+                            background: currentColor;
+                            transform: scaleX(0);
+                            transform-origin: left;
+                            transition: transform .4s cubic-bezier(.39,.1,0,.98);
+                        }
+                    }
+
+                    &:hover {
+                        > span {
+                            &:before {
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .qodef-menu-item-icon {
+            margin-right: 5px;
+        }
+
+        .qodef-mega-menu-widget-holder {
+            display: none;
+        }
+    
+        > ul {
+            
+            > li {
+                margin: 22px 0;
+                
+                > a {
+                    @include qodefMenuLevelOneInitialStyle(h2);
+                    letter-spacing: 0.02em;
+                
+                    &:hover {
+                        @include qodefMenuLevelOneHoverStyle();
+                    }
+                }
+            
+                .qodef-drop-down-second-inner {
+                    
+                    > ul {
+                        padding: $menu-top-bottom-spacing;
+                    }
+                
+                    ul {
+                        padding-left: $menu-level-two-left-spacing;
+                    
+                        li {
+                            &:last-child {
+                                > a {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        
+                            > a {
+                                @include qodefMenuLevelTwoInitialStyle();
+                                margin: 9px 0;
+                                font-family: $text-font;
+                                font-size: 20px;
+                                line-height: 1.3em;
+                                font-weight: 300;
+                                color: #fff;
+
+                                > span {
+                                    &:before {
+                                        width: 100%;
+                                        bottom: 2px;
+                                    }
+                                }
+                            }
+
+                            &.current-menu-ancestor,
+                            &.current-menu-item {
+                                > a {
+                                    > span {
+                                        &:before {
+                                            transform: scaleX(1);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.current-menu-ancestor,
+                &.current-menu-item {
+
+                    > a {
+                        > span {
+                            &:before {
+                                transform: scaleX(1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.qodef-vertical-sliding-drop-down--below {
+            
+            ul li {
+                
+                .qodef-drop-down-second {
+                    display: none;
+                }
+            }
+        }
+
+        &.qodef-vertical-sliding-drop-down--side {
+            
+            .qodef-drop-down-second {
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+                ul {
+                    background-color: #fff;
+                    left: calc(100% + 40px); //because of the padding right
+                    margin-left: 50px;
+                    opacity: 0;
+                    padding: 25px 20px;
+                    position: absolute;
+                    top: -23px;
+                    transition: all $transition-timing;
+                    visibility: hidden;
+                    width: 254px;
+
+                    &.qodef-float--open {
+                        margin-left: 0;
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 900;
+                    }
+
+                    ul {
+                        left: calc(100% + 20px); //because of the padding right
+                        top: -25px; //because of the padding top
+                        transition: all .2s ease;
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}

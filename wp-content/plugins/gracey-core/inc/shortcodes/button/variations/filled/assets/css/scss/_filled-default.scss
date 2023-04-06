@@ -1,0 +1,19 @@
+.qodef-button {
+
+    &.qodef-layout--filled {
+
+        .qodef-btn-icon {
+            margin-right: 3px;
+            padding-right: 3px;
+            top: 3px;
+        }
+    
+        &.qodef-html--link {
+            @include qodefButtonFilledColor();
+    
+            &:hover {
+                @include qodefButtonFilledHoverColor();
+            }
+        }
+    }
+}

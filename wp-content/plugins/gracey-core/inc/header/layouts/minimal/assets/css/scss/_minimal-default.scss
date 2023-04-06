@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Header layout styles
+   ========================================================================== */
+
+#qodef-page-header-inner {
+	
+	.qodef-header--minimal & {
+		
+		.qodef-header-logo-link {
+			margin-right: auto;
+		}
+		
+		.qodef-widget-holder {
+			margin-right: 30px;
+		}
+	}
+}
+
+.qodef-header--minimal {
+	#qodef-page-header {
+		height: 100px;
+	}
+}

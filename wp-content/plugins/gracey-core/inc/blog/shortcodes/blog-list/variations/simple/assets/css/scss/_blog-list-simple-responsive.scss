@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Blog List Simple styles
+   ========================================================================== */
+
+.qodef-blog {
+	
+	&.qodef-item-layout--simple {
+		
+		@include qodefScreenSize1024 {
+			article {
+				.qodef-e-inner {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+}

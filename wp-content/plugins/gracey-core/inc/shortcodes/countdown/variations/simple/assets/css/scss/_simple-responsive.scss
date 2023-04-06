@@ -1,0 +1,13 @@
+.qodef-countdown.qodef-layout--simple {
+
+	@include qodefScreenSize680 {
+
+		.qodef-digit-wrapper {
+			padding: 0 10px;
+		}
+
+		.qodef-digit {
+			font-size: 40px;
+		}
+	}
+}

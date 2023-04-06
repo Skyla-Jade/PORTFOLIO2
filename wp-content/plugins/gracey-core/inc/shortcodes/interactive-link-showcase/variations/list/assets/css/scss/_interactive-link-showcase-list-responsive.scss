@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Interactive Link Showcase List responsive styles
+   ========================================================================== */
+
+.qodef-interactive-link-showcase {
+	&.qodef-layout--list {
+
+		@include qodefScreenSize1440 {
+			.qodef-m-item {
+				font-size: 85px;
+			}
+		}
+
+		@include qodefScreenSize1280 {
+			.qodef-m-item {
+				font-size: 75px;
+			}
+		}
+
+		@include qodefScreenSize768 {
+			.qodef-m-item {
+				font-size: 50px;
+			}
+		}
+
+		@media only screen and (max-width: 768px) and (min-width: 481px) {
+			.qodef-m-item {
+				margin: 20px 0;
+			}
+		}
+
+		@include qodefScreenSize480 {
+			display: flex;
+			align-items: center;
+
+			.qodef-m-items {
+				padding-right: 40px;
+			}
+
+			.qodef-m-item {
+				font-size: 25px;
+
+				.qodef-m-image {
+					display: none;
+				}
+			}
+		}
+	}
+}

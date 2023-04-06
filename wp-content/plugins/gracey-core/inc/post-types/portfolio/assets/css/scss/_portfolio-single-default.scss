@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Portfolio Single styles
+   ========================================================================== */
+
+.qodef-portfolio-single {
+	@include qodefRelativeLayout();
+
+	.qodef-media {
+
+		iframe {
+			max-height: calc(56.25vw);
+		}
+	}
+
+	.qodef-portfolio-title {
+		margin: 0 0 17px;
+	}
+
+	.qodef-portfolio-info {
+
+		> * {
+			display: flex;
+			align-items: flex-start;
+			margin-bottom: 18px;
+			flex-direction: column;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.qodef-e-title {
+			margin: 0 0 3px 0;
+			line-height: 1em;
+		}
+
+		p, a {
+			margin: 0;
+			color: $text-color;
+		}
+
+		.qodef-info--category {
+			margin-bottom: 13px;
+
+			.qodef-e-title {
+				margin: 0 0 5px 0;
+			}
+		}
+
+		.qodef-e-category {
+			font-size: 18px;
+			line-height: 1.39em;
+			position: relative;
+
+			&:before {
+				//content: "";
+				//width: 100%;
+				//height: 1px;
+				//background-color: currentColor;
+				//position: absolute;
+				//left: 0;
+				//bottom: 2px;
+				@include qodefUnderline();
+			}
+
+			&:after {
+				content: ",";
+			}
+
+			&:last-child:after {
+				display: none;
+			}
+			
+			&:hover {
+				&:before {
+					@include qodefUnderlineHover();
+				}
+			}
+		}
+
+		.qodef-inof--social-share {
+			.qodef-social-title {
+				@include qodefHeadingStyle(h6);
+				display: block;
+				margin: 0 0 4px;
+			}
+		}
+	}
+
+	.qodef-variations--small {
+
+		.qodef-portfolio-info {
+			margin-top: 44px;
+		}
+	}
+
+	.qodef-variations--big {
+
+		.qodef-e-content {
+			margin-top: 84px;
+		}
+
+		.qodef-portfolio-info {
+			margin-top: 19px;
+		}
+
+		@media only screen and (min-width: 1025px) {
+			.qodef-portfolio-content {
+				padding-right: 14%;
+			}
+		}
+	}
+}

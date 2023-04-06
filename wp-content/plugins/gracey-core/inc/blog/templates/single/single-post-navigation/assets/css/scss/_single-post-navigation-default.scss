@@ -1,0 +1,120 @@
+/* ==========================================================================
+   Single Post Navigation styles
+   ========================================================================== */
+
+#qodef-single-post-navigation {
+	@include qodefRelativeLayout();
+	margin: 28px 0 0;
+	
+	.qodef-m-inner {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.qodef-m-nav {
+		position: relative;
+		display: flex;
+		align-items: center;
+		
+		> * {
+			display: block;
+			line-height: inherit;
+		}
+		
+		.qodef-m-pagination-icon {
+			position: relative;
+			top: -2px;
+			display: block;
+			width: 30px;
+			height: auto;
+			fill: currentColor;
+			stroke: transparent;
+		}
+		
+		&.qodef--prev,
+		&.qodef--next{
+			stroke: currentColor;
+			
+			path {
+				transition: transform .7s cubic-bezier(0.17, 0.64, 0.22, 0.94);
+				
+				&:nth-of-type(2){
+					transform: translateX(-130%);
+				}
+				
+				&:nth-of-type(1){
+					transition-delay: .15s;
+				}
+			}
+			
+			&:hover {
+				 path {
+					&:nth-of-type(1){
+						transform: translateX(130%);
+						transition-delay: .0s;
+					}
+					&:nth-of-type(2){
+						transform: translateX(0%);
+						transition-delay: .15s;
+					}
+				}
+			}
+		}
+		
+		&.qodef--prev {
+			left: 0;
+			
+			svg {
+				margin-right: 12px;
+			}
+			
+			.qodef-m-pagination-icon {
+				margin-right: 4px;
+			}
+			
+			path {
+				&:nth-of-type(2){
+					transform: translateX(130%);
+				}
+			}
+
+			&:hover {
+				path {
+					&:nth-of-type(1){
+						transform: translateX(-130%);
+					}
+					&:nth-of-type(2){
+						transform: translateX(0%);
+					}
+				}
+			}
+		}
+		
+		&.qodef--next {
+			flex-direction: row-reverse;
+			right: 0;
+			margin-left: auto;
+			text-align: right;
+
+			svg {
+				margin-left: 12px;
+			}
+			
+			.qodef-m-pagination-icon {
+				margin-left: 4px;
+			}
+		}
+	}
+	
+	.qodef-m-nav-label {
+		@include qodefH7Style();
+		font-size: 14px;
+		line-height: 1.86em;
+
+		@include qodefScreenSize480 {
+			display: none;
+		}
+	}
+}
